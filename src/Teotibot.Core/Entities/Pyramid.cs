@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Teotibot.Core.DataModels
+namespace Teotibot.Core.Entities
 {
-    public class TempleBonusData : TileData
+    public class Pyramid
     {
     }
 }

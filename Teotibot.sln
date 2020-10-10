@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Client", "Teotibot.Client\Teotibot.Client.csproj", "{E6F89ABB-8C5B-49E6-9716-FEF12DF50133}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Client", "src\Teotibot.Client\Teotibot.Client.csproj", "{25504DDB-2478-44ED-879B-09C0BD6C85FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Core", "Teotibot.Core\Teotibot.Core.csproj", "{EF3506CD-8BF6-48C3-8610-0D0A53AD0781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Core", "src\Teotibot.Core\Teotibot.Core.csproj", "{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Data", "Teotibot.Data\Teotibot.Data.csproj", "{A5BA5340-A1EA-4DBA-94BE-B386108E0722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Data", "src\Teotibot.Data\Teotibot.Data.csproj", "{BBFBD1FA-1A16-4791-BE07-19900F35B41F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Composition", "Teotibot.Composition\Teotibot.Composition.csproj", "{8BE8A90E-AF22-42D7-B12D-22C858736FFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E6F89ABB-8C5B-49E6-9716-FEF12DF50133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6F89ABB-8C5B-49E6-9716-FEF12DF50133}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6F89ABB-8C5B-49E6-9716-FEF12DF50133}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6F89ABB-8C5B-49E6-9716-FEF12DF50133}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF3506CD-8BF6-48C3-8610-0D0A53AD0781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF3506CD-8BF6-48C3-8610-0D0A53AD0781}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF3506CD-8BF6-48C3-8610-0D0A53AD0781}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF3506CD-8BF6-48C3-8610-0D0A53AD0781}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A5BA5340-A1EA-4DBA-94BE-B386108E0722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5BA5340-A1EA-4DBA-94BE-B386108E0722}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5BA5340-A1EA-4DBA-94BE-B386108E0722}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5BA5340-A1EA-4DBA-94BE-B386108E0722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25504DDB-2478-44ED-879B-09C0BD6C85FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25504DDB-2478-44ED-879B-09C0BD6C85FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25504DDB-2478-44ED-879B-09C0BD6C85FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25504DDB-2478-44ED-879B-09C0BD6C85FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBFBD1FA-1A16-4791-BE07-19900F35B41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFBD1FA-1A16-4791-BE07-19900F35B41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFBD1FA-1A16-4791-BE07-19900F35B41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFBD1FA-1A16-4791-BE07-19900F35B41F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE8A90E-AF22-42D7-B12D-22C858736FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE8A90E-AF22-42D7-B12D-22C858736FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE8A90E-AF22-42D7-B12D-22C858736FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE8A90E-AF22-42D7-B12D-22C858736FFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

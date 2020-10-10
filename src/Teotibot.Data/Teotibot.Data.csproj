@@ -8,4 +8,8 @@
     <PackageReference Include="EntityFrameworkCore.LocalStorage" Version="2.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Teotibot.Core\Teotibot.Core.csproj" />
+  </ItemGroup>
+
 </Project>

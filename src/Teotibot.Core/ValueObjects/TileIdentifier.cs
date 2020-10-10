@@ -18,5 +18,10 @@ namespace Teotibot.Core.ValueObjects
         }
 
         public string Id { get; }
+
+        public override bool Equals(object obj)
+        {
+            return Id.Equals(((TileIdentifier)obj).Id, StringComparison.OrdinalIgnoreCase);
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace Teotibot.Data.Contexts
         internal DbSet<PyramidTileData> PyramidTiles { get; set; }
         internal DbSet<TechnologyTileData> TechnologyTiles { get; set; }
         internal DbSet<RoyalTileData> RoyalTiles { get; set; }
+        internal DbSet<TempleBonusTileData> TempleTiles { get; set; }
     }
 }

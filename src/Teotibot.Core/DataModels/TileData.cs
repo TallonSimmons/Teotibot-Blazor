@@ -2,7 +2,7 @@
 
 namespace Teotibot.Core.DataModels
 {
-    public class TileData
+    public class TileData : IDataModel
     {
         public string Id { get; set; }
         public string Title { get; set; }

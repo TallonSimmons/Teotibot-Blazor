@@ -5,9 +5,9 @@ namespace Teotibot.Core.Entities
 {
     public class Tile
     {
-        public Tile(string path, string title, TileSet tileSet)
+        public Tile(string title, TileSet tileSet)
         {
-            Image = new TileImage(path);
+            Image = new TileImage(title, tileSet);
             TileIdentifier = new TileIdentifier(title, tileSet);
             TileSet = tileSet;
         }

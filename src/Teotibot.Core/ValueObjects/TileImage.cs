@@ -18,5 +18,10 @@ namespace Teotibot.Core.ValueObjects
         }
 
         public string Path { get; }
+
+        public override bool Equals(object obj)
+        {
+            return Path.Equals(((TileImage)obj).Path, StringComparison.OrdinalIgnoreCase);
+        }
     }
 }

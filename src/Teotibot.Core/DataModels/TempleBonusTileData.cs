@@ -1,6 +1,6 @@
 ﻿namespace Teotibot.Core.DataModels
 {
-    public class RoyalTileData
+    public class TempleBonusTileData : TileData
     {
     }
 }
