@@ -1,9 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
+using Teotibot.Core.Enums;
 
 namespace Teotibot.Core.ValueObjects
 {
     public class PyramidPosition
     {
+        private readonly Dictionary<ReplacementDirection, Dictionary<int, int>> _replacementMap = new Dictionary<ReplacementDirection, Dictionary<int, int>>
+        {
+            {
+                ReplacementDirection.Left, new Dictionary<int, int>
+                {
+                    {1, 3},
+                    {2, 5},
+                    {3, 6}
+                }
+            },
+            {
+                ReplacementDirection.Right, new Dictionary<int, int>
+                {
+                    {1, 2},
+                    {2, 4},
+                    {3, 5}
+                }
+            }
+        };
+
         public PyramidPosition(int position)
         {
             if (position < 1 || position > 6)
@@ -16,5 +38,14 @@ namespace Teotibot.Core.ValueObjects
 
         public int Position { get; }
 
+        public int GetReplacementPosition(ReplacementDirection replacementDirection)
+        {
+            if (_replacementMap[replacementDirection].TryGetValue(Position, out var replacement)) 
+            {
+                return replacement;
+            };
+
+            return 0;
+        }
     }
 }

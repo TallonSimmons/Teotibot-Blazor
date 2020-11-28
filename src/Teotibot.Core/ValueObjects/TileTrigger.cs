@@ -22,7 +22,7 @@ namespace Teotibot.Core.ValueObjects
 
             TriggerNumbers = triggerNumbers;
         }
-        List<int> TriggerNumbers { get; }
+        public List<int> TriggerNumbers { get; }
 
         public override bool Equals(object obj)
         {
