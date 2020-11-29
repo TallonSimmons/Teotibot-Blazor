@@ -8,9 +8,6 @@ namespace Teotibot.Core.Entities
 {
     public class Pyramid
     {
-        private DirectionTile topTile = new DirectionTile();
-        private DirectionTile bottomTile = new DirectionTile();
-
         public Pyramid(IEnumerable<PyramidTile> tiles)
         {
             if (tiles is null)
@@ -25,54 +22,72 @@ namespace Teotibot.Core.Entities
 
             var shuffledTiles = tiles.Shuffle().ToList();
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 var currentTile = shuffledTiles[i];
                 currentTile.PyramidPosition = new PyramidPosition(i + 1);
                 PyramidPositions.Add(currentTile.PyramidPosition, currentTile);
             }
 
-            SetAsideTile = shuffledTiles[8];
+            SetAsideTile = shuffledTiles[6];
         }
 
         public PyramidTile SetAsideTile { get; }
         public readonly Dictionary<PyramidPosition, PyramidTile> PyramidPositions = new Dictionary<PyramidPosition, PyramidTile>();
+        public DirectionTile TopTile = new DirectionTile();
+        public DirectionTile BottomTile = new DirectionTile();
 
         public PyramidTile ActivateTile(Die dieOne, Die dieTwo)
         {
             var result = dieOne.Face + dieTwo.Face;
 
-            var targetedPyramidPosition = PyramidPositions.FirstOrDefault(p => p.Value.Trigger.TriggerNumbers.Contains(result));
+            var targetedPyramidPosition = PyramidPositions
+                .FirstOrDefault(p => p.Key.GetPositionTrigger()?.TriggerNumbers.Contains(result) ?? false);
 
             var triggeredPyramidPosition = targetedPyramidPosition.Key;
             var activatedTile = targetedPyramidPosition.Value;
-            PyramidPositions[triggeredPyramidPosition] = null;
+
+            var tilesMoved = false;
+            UpdatePositions(triggeredPyramidPosition);
 
             return activatedTile;
 
-            void UpdatePositions()
+            #region Local functions
+            void UpdatePositions(PyramidPosition triggeredPosition)
             {
+                PyramidPositions[triggeredPosition] = null;
                 var positionToReplace = PyramidPositions.FirstOrDefault(x => x.Value == null);
 
-                var replacementPositionNumber = positionToReplace.Key.GetReplacementPosition(topTile.Direction);
+                var replacementPositionNumber = positionToReplace.Key.GetReplacementPosition(TopTile.Direction);
                 var replaceFromPosition = PyramidPositions.FirstOrDefault(x => x.Key.Position == replacementPositionNumber);
 
-                if(replacementPositionNumber == 0)
+                if (replacementPositionNumber == 0)
                 {
                     PyramidPositions[positionToReplace.Key] = SetAsideTile;
+                }
+                else
+                {
+                    PyramidPositions[positionToReplace.Key] = replaceFromPosition.Value;
 
-                    return;
+                    PyramidPositions[replaceFromPosition.Key] = null;
+
                 }
 
-                PyramidPositions[positionToReplace.Key] = replaceFromPosition.Value;
-
-                PyramidPositions[replaceFromPosition.Key] = null;
-
-                if(PyramidPositions.Any(x => x.Value == null))
+                if (!tilesMoved)
                 {
-                    UpdatePositions();
+                    var tempTopTile = TopTile;
+                    TopTile = BottomTile;
+                    BottomTile = tempTopTile;
+                    tilesMoved = true;
+                    BottomTile.FlipDirection();
+                }
+
+                if (PyramidPositions.Any(x => x.Value == null))
+                {
+                    UpdatePositions(PyramidPositions.FirstOrDefault(x => x.Value == null).Key);
                 }
             }
+            #endregion
         }
     }
 }

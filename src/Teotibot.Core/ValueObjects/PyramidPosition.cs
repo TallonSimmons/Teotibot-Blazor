@@ -6,7 +6,7 @@ namespace Teotibot.Core.ValueObjects
 {
     public class PyramidPosition
     {
-        private readonly Dictionary<ReplacementDirection, Dictionary<int, int>> _replacementMap = new Dictionary<ReplacementDirection, Dictionary<int, int>>
+        private readonly Dictionary<ReplacementDirection, Dictionary<int, int>> replacementMap = new Dictionary<ReplacementDirection, Dictionary<int, int>>
         {
             {
                 ReplacementDirection.Left, new Dictionary<int, int>
@@ -26,6 +26,15 @@ namespace Teotibot.Core.ValueObjects
             }
         };
 
+        private readonly Dictionary<int, PositionTrigger> triggerMap = new Dictionary<int, PositionTrigger>
+        {
+            {1, new PositionTrigger(new List<int>{6,7,8})},
+            {2, new PositionTrigger(new List<int>{4,5})},
+            {3, new PositionTrigger(new List<int>{9,10})},
+            {4, new PositionTrigger(new List<int>{2,3})},
+            {6, new PositionTrigger(new List<int>{11,12})},
+        };
+
         public PyramidPosition(int position)
         {
             if (position < 1 || position > 6)
@@ -40,12 +49,22 @@ namespace Teotibot.Core.ValueObjects
 
         public int GetReplacementPosition(ReplacementDirection replacementDirection)
         {
-            if (_replacementMap[replacementDirection].TryGetValue(Position, out var replacement)) 
+            if (replacementMap[replacementDirection].TryGetValue(Position, out var replacement))
             {
                 return replacement;
             };
 
             return 0;
+        }
+
+        public PositionTrigger GetPositionTrigger()
+        {
+            if(triggerMap.TryGetValue(Position, out var trigger))
+            {
+                return trigger;
+            }
+
+            return null;
         }
     }
 }

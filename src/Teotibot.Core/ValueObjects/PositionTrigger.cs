@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Teotibot.Core.ValueObjects
 {
-    public class TileTrigger
+    public class PositionTrigger
     {
-        public TileTrigger(List<int> triggerNumbers)
+        public PositionTrigger(List<int> triggerNumbers)
         {
             if (triggerNumbers == null)
             {
@@ -27,7 +27,7 @@ namespace Teotibot.Core.ValueObjects
         public override bool Equals(object obj)
         {
             return TriggerNumbers
-                .All(x => ((TileTrigger)obj).TriggerNumbers
+                .All(x => ((PositionTrigger)obj).TriggerNumbers
                 .Any(y => x == y));
         }
     }

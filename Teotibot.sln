@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Data", "src\Teotib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Core.UnitTests", "tests\Teotibot.Core.UnitTests\Teotibot.Core.UnitTests.csproj", "{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{42B942F5-E1AB-42A3-B314-B686F504D7A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B4286AD-6570-4DAD-948D-BEC4126CEEF3} = {42B942F5-E1AB-42A3-B314-B686F504D7A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {807E5D7A-5A08-4162-9C66-EEE8185156AD}
