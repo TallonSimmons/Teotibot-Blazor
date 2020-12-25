@@ -59,12 +59,19 @@ namespace Teotibot.Core.ValueObjects
 
         public PositionTrigger GetPositionTrigger()
         {
-            if(triggerMap.TryGetValue(Position, out var trigger))
+            if (triggerMap.TryGetValue(Position, out var trigger))
             {
                 return trigger;
             }
 
             return null;
         }
+
+        public override bool Equals(object obj)
+        {
+            return ((PyramidPosition)obj)?.Position.Equals(Position) ?? false;
+        }
+        public static bool operator ==(PyramidPosition a, PyramidPosition b) => a?.Equals(b) ?? false;
+        public static bool operator !=(PyramidPosition a, PyramidPosition b) => !a?.Equals(b) ?? true;
     }
 }

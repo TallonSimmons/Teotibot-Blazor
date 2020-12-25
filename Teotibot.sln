@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Core", "src\Teotib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Data", "src\Teotibot.Data\Teotibot.Data.csproj", "{BBFBD1FA-1A16-4791-BE07-19900F35B41F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Core.UnitTests", "tests\Teotibot.Core.UnitTests\Teotibot.Core.UnitTests.csproj", "{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Core.UnitTests", "tests\Teotibot.Core.UnitTests\Teotibot.Core.UnitTests.csproj", "{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{42B942F5-E1AB-42A3-B314-B686F504D7A3}"
 EndProject

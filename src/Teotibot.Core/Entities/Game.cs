@@ -5,29 +5,46 @@ namespace Teotibot.Core.Entities
 {
     public class Game
     {
+        public Game(Guid id, Pyramid pyramid, PyramidTile activeTile, PyramidTile setAsideTile, DirectionTile topDirectionTile, DirectionTile bottomDirectionTile)
+        {
+            Id = id;
+            Pyramid = pyramid ?? throw new ArgumentNullException(nameof(pyramid));
+            ActiveTile = activeTile;
+            SetAsideTile = setAsideTile;
+            TopDirectionTile = topDirectionTile ?? throw new ArgumentNullException(nameof(topDirectionTile));
+            BottomDirectionTile = bottomDirectionTile ?? throw new ArgumentNullException(nameof(bottomDirectionTile));
+        }
+
         public Guid Id { get; }
         public Pyramid Pyramid { get; }
         public PyramidTile ActiveTile { get; private set; }
         public PyramidTile SetAsideTile { get; private set; }
-        public Die DieOne { get; }
-        public Die DieTwo { get; }
         public DirectionTile TopDirectionTile { get; private set; }
         public DirectionTile BottomDirectionTile { get; private set; }
 
-        public void ShiftDirectionTiles()
-        {
-            var tempTopTile = TopDirectionTile;
-            BottomDirectionTile = TopDirectionTile;
-            TopDirectionTile = tempTopTile;
-            TopDirectionTile.FlipDirection();
-        }
-
         public void RollForTile()
         {
-            DieOne.Roll();
-            DieTwo.Roll();
+            ActiveTile = Pyramid.ActivateTile(new TileRoll());
+            Pyramid.FillNextEmptyPyramidPosition(TopDirectionTile, SetAsideTile);
+            UpdateDirectionTiles();
 
-            ActiveTile = Pyramid.ActivateTile(DieOne, DieTwo);
+            while (Pyramid.HasEmptyPyramidPositions)
+            {
+                Pyramid.FillNextEmptyPyramidPosition(TopDirectionTile, SetAsideTile);
+            }
+
+            SetAsideTile = ActiveTile;
+
+            #region Local Functions
+            void UpdateDirectionTiles()
+            {
+                var tempTopTile = TopDirectionTile;
+                TopDirectionTile = BottomDirectionTile;
+                BottomDirectionTile = tempTopTile;
+                BottomDirectionTile.FlipDirection();
+            }
+            #endregion
+
         }
     }
 }

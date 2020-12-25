@@ -13,5 +13,7 @@ namespace Teotibot.Core.ValueObjects
         }
 
         public override bool Equals(object obj) => ((Die)obj)?.Face == Face;
+        public static bool operator ==(Die a, Die b) => a?.Equals(b) ?? false;
+        public static bool operator !=(Die a, Die b) => !a?.Equals(b) ?? true;
     }
 }

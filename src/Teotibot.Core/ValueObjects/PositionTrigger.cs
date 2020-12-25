@@ -30,5 +30,7 @@ namespace Teotibot.Core.ValueObjects
                 .All(x => ((PositionTrigger)obj).TriggerNumbers
                 .Any(y => x == y));
         }
+        public static bool operator ==(PositionTrigger a, PositionTrigger b) => a?.Equals(b) ?? false;
+        public static bool operator !=(PositionTrigger a, PositionTrigger b) => !a?.Equals(b) ?? true;
     }
 }

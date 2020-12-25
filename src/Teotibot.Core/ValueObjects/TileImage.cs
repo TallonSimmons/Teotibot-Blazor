@@ -21,7 +21,9 @@ namespace Teotibot.Core.ValueObjects
 
         public override bool Equals(object obj)
         {
-            return Path.Equals(((TileImage)obj).Path, StringComparison.OrdinalIgnoreCase);
+            return Path.Equals(((TileImage)obj)?.Path, StringComparison.OrdinalIgnoreCase);
         }
+        public static bool operator ==(TileImage a, TileImage b) => a?.Equals(b) ?? false;
+        public static bool operator !=(TileImage a, TileImage b) => !a?.Equals(b) ?? true;
     }
 }
