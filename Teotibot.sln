@@ -7,15 +7,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Client", "src\Teot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Core", "src\Teotibot.Core\Teotibot.Core.csproj", "{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Data", "src\Teotibot.Data\Teotibot.Data.csproj", "{BBFBD1FA-1A16-4791-BE07-19900F35B41F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Core.UnitTests", "tests\Teotibot.Core.UnitTests\Teotibot.Core.UnitTests.csproj", "{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{42B942F5-E1AB-42A3-B314-B686F504D7A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Application", "src\Teotibot.Application\Teotibot.Application.csproj", "{545E6A8C-B130-4905-A3B1-7F737B93265C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Application", "src\Teotibot.Application\Teotibot.Application.csproj", "{545E6A8C-B130-4905-A3B1-7F737B93265C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Application.Composition", "src\Teotibot.Application.Composition\Teotibot.Application.Composition.csproj", "{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Application.Composition", "src\Teotibot.Application.Composition\Teotibot.Application.Composition.csproj", "{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Infrastructure", "src\Teotibot.Infrastructure\Teotibot.Infrastructure.csproj", "{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".presentation", ".presentation", "{19CA0709-E445-4905-A3B6-8F8D17DC9ED1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".application", ".application", "{AA29B260-72D3-4FAC-A4AC-E2F9629D60F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".domain", ".domain", "{3A76F182-81FF-4C9B-8CFF-3C6A182BC374}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".infrastructure", ".infrastructure", "{D7A64C79-F27E-4291-8385-611F6D915A22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +39,6 @@ Global
 		{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75D29C27-9246-44E6-86A7-FB3CB1E21DD5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BBFBD1FA-1A16-4791-BE07-19900F35B41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBFBD1FA-1A16-4791-BE07-19900F35B41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBFBD1FA-1A16-4791-BE07-19900F35B41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBFBD1FA-1A16-4791-BE07-19900F35B41F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,12 +51,21 @@ Global
 		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{25504DDB-2478-44ED-879B-09C0BD6C85FA} = {19CA0709-E445-4905-A3B6-8F8D17DC9ED1}
+		{75D29C27-9246-44E6-86A7-FB3CB1E21DD5} = {3A76F182-81FF-4C9B-8CFF-3C6A182BC374}
 		{7B4286AD-6570-4DAD-948D-BEC4126CEEF3} = {42B942F5-E1AB-42A3-B314-B686F504D7A3}
+		{545E6A8C-B130-4905-A3B1-7F737B93265C} = {AA29B260-72D3-4FAC-A4AC-E2F9629D60F6}
+		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B} = {AA29B260-72D3-4FAC-A4AC-E2F9629D60F6}
+		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5} = {D7A64C79-F27E-4291-8385-611F6D915A22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {807E5D7A-5A08-4162-9C66-EEE8185156AD}

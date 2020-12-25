@@ -1,7 +1,7 @@
 ﻿using Teotibot.Core.Enums;
 using Teotibot.Core.ValueObjects;
 
-namespace Teotibot.Core.Entities
+namespace Teotibot.Core.Entities.PyramidTiles
 {
     public class PyramidTile : Tile
     {
@@ -9,7 +9,7 @@ namespace Teotibot.Core.Entities
         {
             Instructions = instructions;
         }
-        
+
         public PyramidPosition PyramidPosition { get; set; }
         public string Instructions { get; }
     }

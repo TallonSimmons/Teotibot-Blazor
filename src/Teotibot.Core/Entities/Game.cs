@@ -1,4 +1,5 @@
 ﻿using System;
+using Teotibot.Core.Entities.PyramidTiles;
 using Teotibot.Core.ValueObjects;
 
 namespace Teotibot.Core.Entities

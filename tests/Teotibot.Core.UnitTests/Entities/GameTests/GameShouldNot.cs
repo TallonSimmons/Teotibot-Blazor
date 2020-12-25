@@ -1,5 +1,6 @@
 ﻿using System;
 using Teotibot.Core.Entities;
+using Teotibot.Core.Entities.PyramidTiles;
 using Teotibot.Core.Enums;
 using Xunit;
 
