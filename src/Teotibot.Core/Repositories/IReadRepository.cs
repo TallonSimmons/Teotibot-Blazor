@@ -5,6 +5,7 @@ namespace Teotibot.Core.Repositories
 {
     public interface IReadRepository
     {
-        public IAsyncEnumerable<T> StreamAllAsync<T>(Func<T, bool> predicate) where T : class;
+        IAsyncEnumerable<T> FindAsyncStream<T>(Func<T, bool> predicate) where T : class;
+        IAsyncEnumerable<T> GetAllAsyncStream<T>() where T : class;
     }
 }

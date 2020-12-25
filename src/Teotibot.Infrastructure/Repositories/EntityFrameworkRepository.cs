@@ -25,7 +25,7 @@ namespace Teotibot.Infrastructure.Repositories
             return new SavedChangesResult(result);
         }
 
-        public IAsyncEnumerable<T> StreamAllAsync<T>(Func<T, bool> predicate)
+        public IAsyncEnumerable<T> FindAsyncStream<T>(Func<T, bool> predicate)
             where T : class
         {
             return context
@@ -33,6 +33,12 @@ namespace Teotibot.Infrastructure.Repositories
                 .Where(predicate)
                 .AsQueryable()
                 .AsAsyncEnumerable();
+        }
+
+        public IAsyncEnumerable<T> GetAllAsyncStream<T>()
+            where T : class
+        {
+            return context.Set<T>().AsAsyncEnumerable();
         }
     }
 }
