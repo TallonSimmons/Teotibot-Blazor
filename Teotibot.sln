@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teotibot.Core.UnitTests", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{42B942F5-E1AB-42A3-B314-B686F504D7A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Application", "src\Teotibot.Application\Teotibot.Application.csproj", "{545E6A8C-B130-4905-A3B1-7F737B93265C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.Application.Composition", "src\Teotibot.Application.Composition\Teotibot.Application.Composition.csproj", "{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B4286AD-6570-4DAD-948D-BEC4126CEEF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545E6A8C-B130-4905-A3B1-7F737B93265C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545E6A8C-B130-4905-A3B1-7F737B93265C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545E6A8C-B130-4905-A3B1-7F737B93265C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545E6A8C-B130-4905-A3B1-7F737B93265C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

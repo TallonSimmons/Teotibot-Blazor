@@ -5,14 +5,14 @@ namespace Teotibot.Core.Entities
 {
     public class Game
     {
-        public Game(Guid id, Pyramid pyramid, PyramidTile activeTile, PyramidTile setAsideTile, DirectionTile topDirectionTile, DirectionTile bottomDirectionTile)
+        public Game(Guid id, Pyramid pyramid, PyramidTile setAsideTile, DirectionTile topDirectionTile, DirectionTile bottomDirectionTile, PyramidTile activeTile = null)
         {
             Id = id;
             Pyramid = pyramid ?? throw new ArgumentNullException(nameof(pyramid));
-            ActiveTile = activeTile;
-            SetAsideTile = setAsideTile;
+            SetAsideTile = setAsideTile ?? throw new ArgumentNullException(nameof(SetAsideTile));
             TopDirectionTile = topDirectionTile ?? throw new ArgumentNullException(nameof(topDirectionTile));
             BottomDirectionTile = bottomDirectionTile ?? throw new ArgumentNullException(nameof(bottomDirectionTile));
+            ActiveTile = activeTile;
         }
 
         public Guid Id { get; }
