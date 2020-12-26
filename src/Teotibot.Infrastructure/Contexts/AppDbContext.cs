@@ -5,6 +5,6 @@ namespace Teotibot.Infrastructure.Contexts
 {
     internal class AppDbContext : DbContext
     {
-        public DbSet<Game> Games { get; set; }
+        internal DbSet<Game> Games { get; set; }
     }
 }

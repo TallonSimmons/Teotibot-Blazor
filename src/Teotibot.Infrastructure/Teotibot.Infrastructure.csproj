@@ -11,5 +11,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Teotibot.Core\Teotibot.Core.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Teotibot.Application.Composition</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 </Project>

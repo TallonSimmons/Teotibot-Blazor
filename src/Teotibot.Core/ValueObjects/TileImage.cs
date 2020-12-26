@@ -6,7 +6,7 @@ namespace Teotibot.Core.ValueObjects
 {
     public class TileImage
     {
-        public TileImage(string title, TileSet tileSet)
+        public TileImage(string title, TileSet tileSet, TileType tileType)
         {
             if (string.IsNullOrWhiteSpace(title))
             {
@@ -14,7 +14,7 @@ namespace Teotibot.Core.ValueObjects
             }
 
             var prefix = tileSet.GetTileSetName();
-            Path = $"{prefix}-{title}.png";
+            Path = $"{prefix}-{tileType}-{title}.png";
         }
 
         public string Path { get; }

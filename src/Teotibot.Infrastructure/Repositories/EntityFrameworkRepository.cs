@@ -9,7 +9,7 @@ using Teotibot.Infrastructure.Models;
 
 namespace Teotibot.Infrastructure.Repositories
 {
-    internal class EntityFrameworkRepository : IReadRepository, IWriteRepository
+    internal sealed class EntityFrameworkRepository : IRepository
     {
         private readonly AppDbContext context;
 
@@ -35,10 +35,14 @@ namespace Teotibot.Infrastructure.Repositories
                 .AsAsyncEnumerable();
         }
 
-        public IAsyncEnumerable<T> GetAllAsyncStream<T>()
-            where T : class
+        public IAsyncEnumerable<T> GetAllAsyncStream<T>() where T : class
         {
             return context.Set<T>().AsAsyncEnumerable();
+        }
+
+        public T FindSingle<T>(Func<T, bool> predicate) where T : class
+        {
+            return context.Set<T>().FirstOrDefault(predicate);
         }
     }
 }

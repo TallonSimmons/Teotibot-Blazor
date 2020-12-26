@@ -10,8 +10,8 @@ namespace Teotibot.Core.Extensions
             return expansion switch
             {
                 TileSet.BaseGame => "Base",
-                TileSet.LatePreClassicPeriod => "Late Pre-Classic Period",
-                TileSet.ShadowsOfXitle => "Shadows Of Xitle",
+                TileSet.LatePreClassicPeriod => "LPP",
+                TileSet.ShadowsOfXitle => "SoX",
                 _ => throw new ArgumentOutOfRangeException(),
             };
         }

@@ -7,6 +7,8 @@ namespace Teotibot.Application.Composition
         public static WebAssemblyHostBuilder ComposeApplication(this WebAssemblyHostBuilder builder)
         {
             builder.Services
+                .AddEntityFramework()
+                .AddStores()
                 .AddMediatr();
 
             return builder;

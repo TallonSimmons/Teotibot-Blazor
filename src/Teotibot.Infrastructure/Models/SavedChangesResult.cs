@@ -1,14 +1,14 @@
-﻿using System;
-using Teotibot.Core.Repositories;
+﻿using Teotibot.Core.Repositories;
 
 namespace Teotibot.Infrastructure.Models
 {
-    internal class SavedChangesResult : ISavedChangesResult
+    internal sealed class SavedChangesResult : ISavedChangesResult
     {
-        public SavedChangesResult(int numberOfChangesSaved)
+        internal SavedChangesResult(int numberOfChangesSaved)
         {
             NumberOfChangesSaved = numberOfChangesSaved;
         }
+
         public int NumberOfChangesSaved { get; }
     }
 }

@@ -2,7 +2,7 @@
 {
     public enum RoyalTileCategory
     {
-        A,
+        A = 1,
         B,
         C
     }

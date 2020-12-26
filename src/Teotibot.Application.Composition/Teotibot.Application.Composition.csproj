@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Teotibot.Application\Teotibot.Application.csproj" />
+    <ProjectReference Include="..\Teotibot.Infrastructure\Teotibot.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

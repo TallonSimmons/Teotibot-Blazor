@@ -4,6 +4,7 @@
     {
         BaseGame = 1,
         LatePreClassicPeriod,
-        ShadowsOfXitle
+        ShadowsOfXitle,
+        Promo
     }
 }
