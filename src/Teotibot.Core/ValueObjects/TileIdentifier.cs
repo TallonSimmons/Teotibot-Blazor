@@ -23,6 +23,12 @@ namespace Teotibot.Core.ValueObjects
         {
             return Id.Equals(((TileIdentifier)obj)?.Id, StringComparison.OrdinalIgnoreCase);
         }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
+
         public static bool operator ==(TileIdentifier a, TileIdentifier b) => a?.Equals(b) ?? false;
         public static bool operator !=(TileIdentifier a, TileIdentifier b) => !a?.Equals(b) ?? true;
     }

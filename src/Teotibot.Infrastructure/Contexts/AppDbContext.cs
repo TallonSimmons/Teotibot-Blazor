@@ -1,10 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Teotibot.Core.Entities;
+using Teotibot.Infrastructure.DataModels;
 
 namespace Teotibot.Infrastructure.Contexts
 {
     internal class AppDbContext : DbContext
     {
-        internal DbSet<Game> Games { get; set; }
+        public AppDbContext()
+        {
+            Database.EnsureCreated();
+        }
+        internal DbSet<GameData> Games { get; set; }
     }
 }

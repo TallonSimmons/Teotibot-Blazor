@@ -1,4 +1,4 @@
-﻿namespace Teotibot.Core.Repositories
+﻿namespace Teotibot.Core.Repositories.Results
 {
     public interface ISavedChangesResult
     {

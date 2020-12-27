@@ -4,7 +4,7 @@ using Teotibot.Core.ValueObjects;
 
 namespace Teotibot.Core.Entities
 {
-    public class Game
+    public class Game : Entity<Guid>
     {
         public Game(Guid id, Pyramid pyramid, PyramidTile setAsideTile, DirectionTile topDirectionTile, DirectionTile bottomDirectionTile, PyramidTile activeTile = null)
         {

@@ -27,11 +27,7 @@ namespace Teotibot.Application.Commands
 
         public async Task<Unit> Handle(SaveGameCommand request, CancellationToken cancellationToken)
         {
-            var gameToUpdate = repository.FindSingle<Game>(x => x.Id.Equals(request.Game.Id));
-
-            gameToUpdate = request.Game;
-
-            var result = await repository.SaveChangesAsync();
+            var result = repository.CreateOrUpdate(request.Game);
 
             return Unit.Value;
         }

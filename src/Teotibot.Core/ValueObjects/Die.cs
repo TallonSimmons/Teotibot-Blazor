@@ -13,6 +13,8 @@ namespace Teotibot.Core.ValueObjects
         }
 
         public override bool Equals(object obj) => ((Die)obj)?.Face == Face;
+        public override int GetHashCode() => HashCode.Combine(Face);
+
         public static bool operator ==(Die a, Die b) => a?.Equals(b) ?? false;
         public static bool operator !=(Die a, Die b) => !a?.Equals(b) ?? true;
     }

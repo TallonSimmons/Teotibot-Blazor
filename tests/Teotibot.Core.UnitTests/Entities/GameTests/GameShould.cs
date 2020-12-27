@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Teotibot.Core.Entities;
 using Teotibot.Core.Entities.PyramidTiles;
 using Teotibot.Core.Enums;
+using Teotibot.Core.ValueObjects;
 using Xunit;
 
 namespace Teotibot.Core.UnitTests.Entities.GameTests

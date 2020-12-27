@@ -23,6 +23,12 @@ namespace Teotibot.Core.ValueObjects
         {
             return Path.Equals(((TileImage)obj)?.Path, StringComparison.OrdinalIgnoreCase);
         }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Path);
+        }
+
         public static bool operator ==(TileImage a, TileImage b) => a?.Equals(b) ?? false;
         public static bool operator !=(TileImage a, TileImage b) => !a?.Equals(b) ?? true;
     }

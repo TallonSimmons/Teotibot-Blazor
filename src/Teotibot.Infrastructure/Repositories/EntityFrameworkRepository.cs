@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Teotibot.Core.Repositories;
+using Teotibot.Core.Repositories.Results;
 using Teotibot.Infrastructure.Contexts;
 using Teotibot.Infrastructure.Models;
 
@@ -23,6 +24,20 @@ namespace Teotibot.Infrastructure.Repositories
             var result = await context.SaveChangesAsync();
 
             return new SavedChangesResult(result);
+        }
+
+        public async Task<ISavedChangesResult> CreateOrUpdate<T>(T entity)
+        {
+            try
+            {
+                context.Add(entity);
+            }
+            catch (Exception)
+            {
+                context.Update(entity);
+            }
+
+            return await SaveChangesAsync();
         }
 
         public IAsyncEnumerable<T> FindAsyncStream<T>(Func<T, bool> predicate)

@@ -1,4 +1,6 @@
-﻿namespace Teotibot.Core.ValueObjects
+﻿using System;
+
+namespace Teotibot.Core.ValueObjects
 {
     public class TileRoll
     {
@@ -17,6 +19,11 @@
         public override bool Equals(object obj)
         {
             return ((TileRoll)obj)?.Result == Result;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Result);
         }
 
         public static bool operator ==(TileRoll a, TileRoll b) => a?.Equals(b) ?? false;

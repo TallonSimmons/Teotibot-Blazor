@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".domain", ".domain", "{3A76
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".infrastructure", ".infrastructure", "{D7A64C79-F27E-4291-8385-611F6D915A22}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sharedKernel", ".sharedKernel", "{F62B06CC-390F-4E6C-A900-387B4844219F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teotibot.SharedKernel", "src\Teotibot.SharedKernel\Teotibot.SharedKernel.csproj", "{2E138DA9-BB5B-48C4-A2D5-3CE6E8D36F56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E138DA9-BB5B-48C4-A2D5-3CE6E8D36F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E138DA9-BB5B-48C4-A2D5-3CE6E8D36F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E138DA9-BB5B-48C4-A2D5-3CE6E8D36F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E138DA9-BB5B-48C4-A2D5-3CE6E8D36F56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +74,7 @@ Global
 		{545E6A8C-B130-4905-A3B1-7F737B93265C} = {AA29B260-72D3-4FAC-A4AC-E2F9629D60F6}
 		{E6AE77C7-30F7-488F-B87C-9600F8C3F24B} = {AA29B260-72D3-4FAC-A4AC-E2F9629D60F6}
 		{BC203FCE-E56E-47D3-B4DF-BBFD49A0DAC5} = {D7A64C79-F27E-4291-8385-611F6D915A22}
+		{2E138DA9-BB5B-48C4-A2D5-3CE6E8D36F56} = {F62B06CC-390F-4E6C-A900-387B4844219F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {807E5D7A-5A08-4162-9C66-EEE8185156AD}

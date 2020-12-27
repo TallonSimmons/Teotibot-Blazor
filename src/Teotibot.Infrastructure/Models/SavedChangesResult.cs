@@ -1,4 +1,4 @@
-﻿using Teotibot.Core.Repositories;
+﻿using Teotibot.Core.Repositories.Results;
 
 namespace Teotibot.Infrastructure.Models
 {

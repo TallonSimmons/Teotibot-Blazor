@@ -1,5 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using Teotibot.Core.Enums;
+﻿using Teotibot.Core.Enums;
 using Teotibot.Core.ValueObjects;
 
 namespace Teotibot.Core.Entities

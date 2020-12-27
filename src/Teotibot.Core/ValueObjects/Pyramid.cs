@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Teotibot.Core.Entities;
 using Teotibot.Core.Entities.PyramidTiles;
 using Teotibot.Core.Extensions;
-using Teotibot.Core.ValueObjects;
+using Teotibot.SharedKernel.Extensions;
 
-namespace Teotibot.Core.Entities
+namespace Teotibot.Core.ValueObjects
 {
     public class Pyramid
     {
@@ -65,5 +66,20 @@ namespace Teotibot.Core.Entities
                 pyramidPositions[replaceFromPosition.Key] = null;
             }
         }
+
+        public override bool Equals(object obj)
+        {
+            var other = ((Pyramid)obj);
+            return other?.HasEmptyPyramidPositions == HasEmptyPyramidPositions 
+                && other.pyramidPositions.ContentEquals(pyramidPositions);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(pyramidPositions, HasEmptyPyramidPositions);
+        }
+
+        public static bool operator ==(Pyramid a, Pyramid b) => a?.Equals(b) ?? false;
+        public static bool operator !=(Pyramid a, Pyramid b) => !a?.Equals(b) ?? true;
     }
 }

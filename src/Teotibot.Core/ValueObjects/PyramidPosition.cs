@@ -71,6 +71,12 @@ namespace Teotibot.Core.ValueObjects
         {
             return ((PyramidPosition)obj)?.Position.Equals(Position) ?? false;
         }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(replacementMap, triggerMap, Position);
+        }
+
         public static bool operator ==(PyramidPosition a, PyramidPosition b) => a?.Equals(b) ?? false;
         public static bool operator !=(PyramidPosition a, PyramidPosition b) => !a?.Equals(b) ?? true;
     }
