@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Teotibot.Core.Entities.PyramidTiles;
+using Teotibot.Core.Entities.Tiles.PyramidTiles;
 using Teotibot.Core.Enums;
 
 namespace Teotibot.Core.UnitTests.Entities.GameTests

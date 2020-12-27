@@ -1,7 +1,8 @@
-﻿using Teotibot.Core.Enums;
+﻿using Teotibot.Core.Entities.Tiles;
+using Teotibot.Core.Enums;
 using Teotibot.Core.ValueObjects;
 
-namespace Teotibot.Core.Entities.PyramidTiles
+namespace Teotibot.Core.Entities.Tiles.PyramidTiles
 {
     public class PyramidTile : Tile
     {

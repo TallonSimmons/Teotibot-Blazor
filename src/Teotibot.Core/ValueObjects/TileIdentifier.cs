@@ -6,7 +6,7 @@ namespace Teotibot.Core.ValueObjects
 {
     public class TileIdentifier
     {
-        public TileIdentifier(string title, TileSet expansion)
+        public TileIdentifier(string title, TileSet expansion, TileType tileType)
         {
             if (string.IsNullOrWhiteSpace(title))
             {
@@ -14,7 +14,7 @@ namespace Teotibot.Core.ValueObjects
             }
 
             var prefix = expansion.GetTileSetName();
-            Id = $"{prefix}:{title}";
+            Id = $"{prefix}-{title}-{tileType.GetTileTypeName()}";
         }
 
         public string Id { get; }

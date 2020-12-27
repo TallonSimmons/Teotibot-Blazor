@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using Teotibot.Core.Entities;
-using Teotibot.Core.Entities.PyramidTiles;
+using Teotibot.Core.Entities.Tiles;
+using Teotibot.Core.Entities.Tiles.PyramidTiles;
 using Teotibot.Core.Enums;
 using Teotibot.Core.ValueObjects;
 using Xunit;

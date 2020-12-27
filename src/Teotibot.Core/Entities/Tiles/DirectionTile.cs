@@ -1,7 +1,7 @@
 ﻿using System;
 using Teotibot.Core.Enums;
 
-namespace Teotibot.Core.Entities
+namespace Teotibot.Core.Entities.Tiles
 {
     public class DirectionTile
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Teotibot.Core.Enums;
 
-namespace Teotibot.Core.Entities.PyramidTiles
+namespace Teotibot.Core.Entities.Tiles.PyramidTiles
 {
     public class NoblesPyramidTile : PyramidTile
     {

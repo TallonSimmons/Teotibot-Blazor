@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Teotibot.Core.Entities;
-using Teotibot.Core.Entities.PyramidTiles;
+using Teotibot.Core.Entities.Tiles;
+using Teotibot.Core.Entities.Tiles.PyramidTiles;
 using Teotibot.Core.ValueObjects;
 
 namespace Teotibot.Infrastructure.DataModels

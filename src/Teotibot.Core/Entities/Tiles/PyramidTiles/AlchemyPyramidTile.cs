@@ -1,6 +1,6 @@
 ﻿using Teotibot.Core.Enums;
 
-namespace Teotibot.Core.Entities.PyramidTiles
+namespace Teotibot.Core.Entities.Tiles.PyramidTiles
 {
     public class AlchemyPyramidTile : PyramidTile
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Teotibot.Core.Entities;
+using Teotibot.Core.Entities.Tiles;
 using Teotibot.Core.Enums;
 using Teotibot.Core.Store;
 

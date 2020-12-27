@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Teotibot.Core.Entities;
+using Teotibot.Core.Entities.Tiles;
 using Teotibot.Core.Store;
 
 namespace Teotibot.Infrastructure.Stores
