@@ -66,5 +66,21 @@ namespace Teotibot.Core.ValueObjects
                 pyramidPositions[replaceFromPosition.Key] = null;
             }
         }
+
+        public static (Pyramid Pyramid, PyramidTile SetAsideTile) CreateFromPyramidTileCollection(IEnumerable<PyramidTile> tiles)
+        {
+            if (tiles is null)
+            {
+                throw new ArgumentNullException(nameof(tiles));
+            }
+            if(tiles.Count() != 7)
+            {
+                throw new ArgumentOutOfRangeException(nameof(tiles));
+            }
+
+            tiles.Shuffle();
+
+            return (new Pyramid(tiles.Take(6)), tiles.Last());
+        }
     }
 }

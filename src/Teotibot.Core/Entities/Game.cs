@@ -8,7 +8,7 @@ namespace Teotibot.Core.Entities
 {
     public class Game : Entity<Guid>
     {
-        public Game(Guid id, GameSettings settings, Pyramid pyramid, PyramidTile setAsideTile, DirectionTile topDirectionTile, DirectionTile bottomDirectionTile, PyramidTile activeTile = null)
+        public Game(Guid id, GameSettings settings, Pyramid pyramid, PyramidTile setAsideTile, DirectionTile topDirectionTile, DirectionTile bottomDirectionTile, PyramidTile? activeTile)
             : base(id)
         {
             Settings = settings;

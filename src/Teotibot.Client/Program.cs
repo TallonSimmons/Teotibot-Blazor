@@ -11,7 +11,8 @@ namespace Teotibot.Client
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
 
-            builder.ComposeApplication();
+            builder
+                .ComposeApplication();
 
             await builder.Build().RunAsync();
         }

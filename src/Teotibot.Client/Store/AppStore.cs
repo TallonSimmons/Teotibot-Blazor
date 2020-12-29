@@ -1,4 +1,6 @@
-﻿using Teotibot.Core.Entities;
+﻿using System;
+using Teotibot.Core.Entities;
+using Teotibot.Core.ValueObjects.Settings;
 
 namespace Teotibot.Client.Store
 {

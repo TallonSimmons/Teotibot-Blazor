@@ -23,7 +23,7 @@ namespace Teotibot.Core.UnitTests.Entities.GameTests
         {
             var pyramid = new Pyramid(fixture.Tiles);
 
-            var game = new Game(Guid.NewGuid(), fixture.EverythingOnGameSettings, pyramid, new PyramidTile("Test", Set.BaseGame, ""), new DirectionTile(), new DirectionTile());
+            var game = new Game(Guid.NewGuid(), fixture.EverythingOnGameSettings, pyramid, new PyramidTile("Test", Set.BaseGame, ""), new DirectionTile(), new DirectionTile(), null);
             var expectedBottomDirection = game.TopDirectionTile.Direction == ReplacementDirection.Left ? ReplacementDirection.Right : ReplacementDirection.Left;
             var expectedTopDirection = game.BottomDirectionTile.Direction;
 
