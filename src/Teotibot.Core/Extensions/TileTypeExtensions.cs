@@ -14,6 +14,7 @@ namespace Teotibot.Core.Extensions
                 TileType.StartingTile => "Starting",
                 TileType.TechnologyTile => "Technology",
                 TileType.SeasonTile => "Season",
+                TileType.PriestTile => "Priest",
                 _ => throw new ArgumentOutOfRangeException()
             };
         }

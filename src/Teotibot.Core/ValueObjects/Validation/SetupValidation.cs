@@ -31,7 +31,10 @@ namespace Teotibot.Core.ValueObjects.Validation
 
             valid = setup.TechnologyTiles is not null && setup.RoyalTiles.Count == 3 &&
                 setup.StartingTiles.Count == 4 &&
-                setup.TechnologyTiles.Count == 6;
+                setup.TechnologyTiles.Count == 6 &&
+                setup.RoyalTiles.Count(x => x.Category == RoyalTileCategory.A) == 1 &&
+                setup.RoyalTiles.Count(x => x.Category == RoyalTileCategory.B) == 1 &&
+                setup.RoyalTiles.Count(x => x.Category == RoyalTileCategory.C) == 1;
 
             if (!valid)
             {

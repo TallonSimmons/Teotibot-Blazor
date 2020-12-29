@@ -2,7 +2,7 @@
 using Teotibot.Core.ValueObjects;
 using Xunit;
 
-namespace Teotibot.Core.UnitTests.ValueObjects
+namespace Teotibot.Core.UnitTests.ValueObjects.PyramidPositionTests
 {
     public class PyramidPositionShould
     {

@@ -3,7 +3,7 @@ using Teotibot.Core.Entities.Tiles.PyramidTiles;
 using Teotibot.Core.Enums;
 using Teotibot.Core.ValueObjects.Settings;
 
-namespace Teotibot.Core.UnitTests.Entities.GameTests
+namespace Teotibot.Core.UnitTests.Shared.Fixtures
 {
     public class GameTestFixture
     {
