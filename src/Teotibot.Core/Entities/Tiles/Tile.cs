@@ -5,7 +5,7 @@ namespace Teotibot.Core.Entities.Tiles
 {
     public class Tile : Entity<TileIdentifier>
     {
-        public Tile(string title, TileSet tileSet, TileType tileType) : base(new TileIdentifier(title, tileSet, tileType))
+        public Tile(string title, Set tileSet, TileType tileType) : base(new TileIdentifier(title, tileSet, tileType))
         {
             Image = new TileImage(title, tileSet, tileType);
             TileSet = tileSet;
@@ -14,7 +14,7 @@ namespace Teotibot.Core.Entities.Tiles
 
 
         public TileImage Image { get; }
-        public TileSet TileSet { get; }
+        public Set TileSet { get; }
         public TileType TileType { get; }
     }
 }

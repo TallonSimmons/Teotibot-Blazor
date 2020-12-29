@@ -20,7 +20,7 @@ Note: the bot does not benefit from Technology tiles.
 2. If the above step failed, power up its lowest unlocked worker
 by two, without carrying out any actions or advancing any
 workers.";
-        public AlchemyPyramidTile() : base("Alchemy", TileSet.BaseGame, instructions)
+        public AlchemyPyramidTile() : base("Alchemy", Set.BaseGame, instructions)
         {
         }
     }

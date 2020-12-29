@@ -6,6 +6,7 @@
         TechnologyTile,
         RoyalTile,
         PyramidTile,
-        SeasonTile
+        SeasonTile,
+        PriestTile
     }
 }

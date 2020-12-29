@@ -16,7 +16,7 @@ the same rarity, it picks the first one clockwise, starting from
 2. If the above step yielded no masks, the bot gains 5 cocoa
 instead, powers up its lowest powered worker, and then
 advances it.";
-        public MaskCollectionPyramidTile() : base("Mask Collection", TileSet.BaseGame, instructions)
+        public MaskCollectionPyramidTile() : base("Mask Collection", Set.BaseGame, instructions)
         {
         }
     }

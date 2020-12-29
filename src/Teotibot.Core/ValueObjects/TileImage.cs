@@ -6,7 +6,7 @@ namespace Teotibot.Core.ValueObjects
 {
     public class TileImage
     {
-        public TileImage(string title, TileSet tileSet, TileType tileType)
+        public TileImage(string title, Set tileSet, TileType tileType)
         {
             if (string.IsNullOrWhiteSpace(title))
             {

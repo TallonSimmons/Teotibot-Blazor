@@ -23,7 +23,7 @@ one triggered Ascension).
 5 cocoa instead, powers up its lowest powered worker, and
 then advances it.";
 
-        public DecorationsPyramidTile() : base("Decorations", TileSet.BaseGame, instructions)
+        public DecorationsPyramidTile() : base("Decorations", Set.BaseGame, instructions)
         {
         }
     }

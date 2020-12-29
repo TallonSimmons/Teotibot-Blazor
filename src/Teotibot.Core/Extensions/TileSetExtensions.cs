@@ -5,13 +5,13 @@ namespace Teotibot.Core.Extensions
 {
     public static class TileSetExtensions
     {
-        public static string GetTileSetName(this TileSet expansion)
+        public static string GetTileSetName(this Set expansion)
         {
             return expansion switch
             {
-                TileSet.BaseGame => "Base",
-                TileSet.LatePreClassicPeriod => "LPP",
-                TileSet.ShadowsOfXitle => "SoX",
+                Set.BaseGame => "Base",
+                Set.LatePreClassicPeriod => "LPP",
+                Set.ShadowsOfXitle => "SoX",
                 _ => throw new ArgumentOutOfRangeException(),
             };
         }

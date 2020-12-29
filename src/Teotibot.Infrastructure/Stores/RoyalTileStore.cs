@@ -23,15 +23,15 @@ namespace Teotibot.Infrastructure.Stores
                 {
                     for (int i = 0; i < 3; i++)
                     {
-                        royalTiles.Add(new RoyalTile(i.ToString(), TileSet.BaseGame, (RoyalTileCategory)category));
+                        royalTiles.Add(new RoyalTile(i.ToString(), Set.BaseGame, (RoyalTileCategory)category));
                     }
                 }
             }
 
             void AddPromoTiles()
             {
-                royalTiles.Add(new RoyalTile(1.ToString(), TileSet.Promo, RoyalTileCategory.A));
-                royalTiles.Add(new RoyalTile(2.ToString(), TileSet.Promo, RoyalTileCategory.C));
+                royalTiles.Add(new RoyalTile(1.ToString(), Set.Promo, RoyalTileCategory.A));
+                royalTiles.Add(new RoyalTile(2.ToString(), Set.Promo, RoyalTileCategory.C));
             }
         }
     }

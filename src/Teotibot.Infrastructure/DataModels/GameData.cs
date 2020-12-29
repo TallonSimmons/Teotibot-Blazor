@@ -4,6 +4,7 @@ using Teotibot.Core.Entities;
 using Teotibot.Core.Entities.Tiles;
 using Teotibot.Core.Entities.Tiles.PyramidTiles;
 using Teotibot.Core.ValueObjects;
+using Teotibot.Core.ValueObjects.Settings;
 
 namespace Teotibot.Infrastructure.DataModels
 {
@@ -11,6 +12,7 @@ namespace Teotibot.Infrastructure.DataModels
     {
         [Key]
         public Guid Id { get; set; }
+        public GameSettings GameSettings { get; set; }
         public Pyramid Pyramid { get; set; }
         public PyramidTile ActiveTile { get; set; }
         public PyramidTile SetAsideTile { get; set; }
@@ -24,6 +26,7 @@ namespace Teotibot.Infrastructure.DataModels
         {
             return new Game(
                 gameData.Id,
+                gameData.GameSettings,
                 gameData.Pyramid,
                 gameData.SetAsideTile,
                 gameData.TopDirectionTile,
@@ -36,6 +39,7 @@ namespace Teotibot.Infrastructure.DataModels
             return new GameData
             {
                 Id = game.Id,
+                GameSettings = game.Settings,
                 Pyramid = game.Pyramid,
                 ActiveTile = game.ActiveTile,
                 SetAsideTile = game.SetAsideTile,

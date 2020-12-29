@@ -35,7 +35,7 @@ namespace Teotibot.Core.ValueObjects
 
         public bool HasEmptyPyramidPositions => pyramidPositions.Any(x => x.Value == null);
 
-        public PyramidTile ActivateTile(TileRoll tileRoll)
+        internal PyramidTile ActivateTile(TileRoll tileRoll)
         {
             var targetedPyramidPosition = pyramidPositions
                 .FirstOrDefault(p => p.Key.GetPositionTrigger()?.TriggerNumbers.Contains(tileRoll.Result) ?? false);
@@ -48,7 +48,7 @@ namespace Teotibot.Core.ValueObjects
             return activatedTile;
         }
 
-        public void FillNextEmptyPyramidPosition(DirectionTile directionTile, PyramidTile setAsideTile)
+        internal void FillNextEmptyPyramidPosition(DirectionTile directionTile, PyramidTile setAsideTile)
         {
             var positionToReplace = pyramidPositions.FirstOrDefault(x => x.Value == null);
 

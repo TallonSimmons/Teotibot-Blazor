@@ -20,7 +20,7 @@ the Stone Quarry (3) Action Board, gain 2 stone.
 power up a worker on the relevant Action Board (this might
 trigger an Ascension, which is resolved normally). Then
 advance the powered-up worker (or the new worker, if the old one triggered Ascension).";
-        public ConstructionPyramidTile() : base("Construction", TileSet.BaseGame, instructions)
+        public ConstructionPyramidTile() : base("Construction", Set.BaseGame, instructions)
         {
         }
     }

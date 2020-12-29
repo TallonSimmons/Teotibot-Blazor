@@ -12,14 +12,14 @@ namespace Teotibot.Infrastructure.Stores
         public IEnumerable<TechnologyTile> GetAll()
         {
             var technologyTiles = new List<TechnologyTile>();
-            AddTiles(9, TileSet.BaseGame);
-            AddTiles(1, TileSet.Promo);
-            AddTiles(10, TileSet.ShadowsOfXitle);
+            AddTiles(9, Set.BaseGame);
+            AddTiles(1, Set.Promo);
+            AddTiles(10, Set.ShadowsOfXitle);
 
             return technologyTiles;
 
             #region Local Functions
-            void AddTiles(int numberOfTilesToAdd, TileSet tileSet)
+            void AddTiles(int numberOfTilesToAdd, Set tileSet)
             {
                 for (var i = 1; i < numberOfTilesToAdd + 1; i++)
                 {

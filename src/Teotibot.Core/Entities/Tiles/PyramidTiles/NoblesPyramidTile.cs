@@ -28,7 +28,7 @@ if the old one triggered Ascension).
 4. If neither of the above steps were successful, the bot gains
 5 cocoa instead, powers up its lowest powered worker, and
 then advances it.";
-        public NoblesPyramidTile() : base("Nobles", TileSet.BaseGame, instructions)
+        public NoblesPyramidTile() : base("Nobles", Set.BaseGame, instructions)
         {
         }
     }

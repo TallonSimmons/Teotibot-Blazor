@@ -22,7 +22,7 @@ if the old one triggered Ascension).
 5. In the extremely unlikely event of all workers failing to
 perform an action, the bot gains 5 cocoa instead, powers up
 its lowest powered worker, and then advances it.";
-        public MasteryPyramidTile() : base("Mastery", TileSet.BaseGame, instructions)
+        public MasteryPyramidTile() : base("Mastery", Set.BaseGame, instructions)
         {
         }
     }

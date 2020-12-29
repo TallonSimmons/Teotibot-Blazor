@@ -6,7 +6,7 @@ namespace Teotibot.Core.Entities.Tiles.PyramidTiles
 {
     public class PyramidTile : Tile
     {
-        public PyramidTile(string title, TileSet tileSet, string instructions) : base(title, tileSet, TileType.PyramidTile)
+        public PyramidTile(string title, Set tileSet, string instructions) : base(title, tileSet, TileType.PyramidTile)
         {
             Instructions = instructions;
         }

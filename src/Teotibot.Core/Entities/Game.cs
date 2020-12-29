@@ -2,14 +2,16 @@
 using Teotibot.Core.Entities.Tiles;
 using Teotibot.Core.Entities.Tiles.PyramidTiles;
 using Teotibot.Core.ValueObjects;
+using Teotibot.Core.ValueObjects.Settings;
 
 namespace Teotibot.Core.Entities
 {
     public class Game : Entity<Guid>
     {
-        public Game(Guid id, Pyramid pyramid, PyramidTile setAsideTile, DirectionTile topDirectionTile, DirectionTile bottomDirectionTile, PyramidTile activeTile = null)
+        public Game(Guid id, GameSettings settings, Pyramid pyramid, PyramidTile setAsideTile, DirectionTile topDirectionTile, DirectionTile bottomDirectionTile, PyramidTile activeTile = null)
             : base(id)
         {
+            Settings = settings;
             Pyramid = pyramid ?? throw new ArgumentNullException(nameof(pyramid));
             SetAsideTile = setAsideTile ?? throw new ArgumentNullException(nameof(SetAsideTile));
             TopDirectionTile = topDirectionTile ?? throw new ArgumentNullException(nameof(topDirectionTile));
@@ -17,6 +19,7 @@ namespace Teotibot.Core.Entities
             ActiveTile = activeTile;
         }
 
+        public GameSettings Settings { get; }
         public Pyramid Pyramid { get; }
         public PyramidTile ActiveTile { get; private set; }
         public PyramidTile SetAsideTile { get; private set; }

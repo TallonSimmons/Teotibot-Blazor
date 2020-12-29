@@ -6,7 +6,7 @@ namespace Teotibot.Core.ValueObjects
 {
     public class TileIdentifier
     {
-        public TileIdentifier(string title, TileSet expansion, TileType tileType)
+        public TileIdentifier(string title, Set expansion, TileType tileType)
         {
             if (string.IsNullOrWhiteSpace(title))
             {

@@ -16,7 +16,7 @@ instead of Discovery tiles as mentioned before).
 Board, the bot advances on any temple by 3 instead.
 2. Discard the Discovery tile near the activated space, and
 immediately draw a replacement for it.";
-        public WorshipPyramidTile() : base("Worship", TileSet.BaseGame, instructions)
+        public WorshipPyramidTile() : base("Worship", Set.BaseGame, instructions)
         {
         }
     }

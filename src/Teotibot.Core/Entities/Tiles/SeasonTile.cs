@@ -4,7 +4,7 @@ namespace Teotibot.Core.Entities.Tiles
 {
     public class SeasonTile : Tile
     {
-        public SeasonTile(string title) : base(title, TileSet.LatePreClassicPeriod, TileType.SeasonTile)
+        public SeasonTile(string title) : base(title, Set.LatePreClassicPeriod, TileType.SeasonTile)
         {
         }
     }

@@ -11,14 +11,14 @@ namespace Teotibot.Infrastructure.Stores
         {
             var startingTiles = new List<StartingTile>();
 
-            AddTiles(18, TileSet.BaseGame);
-            AddTiles(2, TileSet.Promo);
-            AddTiles(10, TileSet.ShadowsOfXitle);
+            AddTiles(18, Set.BaseGame);
+            AddTiles(2, Set.Promo);
+            AddTiles(10, Set.ShadowsOfXitle);
 
             return startingTiles;
 
             #region Local functions
-            void AddTiles(int numberOfTilesToAdd, TileSet tileSet)
+            void AddTiles(int numberOfTilesToAdd, Set tileSet)
             {
                 for (int i = 1; i < numberOfTilesToAdd + 1; i++)
                 {
