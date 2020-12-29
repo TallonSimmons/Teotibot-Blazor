@@ -4,7 +4,7 @@ using Teotibot.Core.Enums;
 
 namespace Teotibot.Core.ValueObjects
 {
-    public class PyramidPosition
+    public record PyramidPosition
     {
         private readonly Dictionary<ReplacementDirection, Dictionary<int, int>> replacementMap = new Dictionary<ReplacementDirection, Dictionary<int, int>>
         {
@@ -66,18 +66,5 @@ namespace Teotibot.Core.ValueObjects
 
             return null;
         }
-
-        public override bool Equals(object obj)
-        {
-            return ((PyramidPosition)obj)?.Position.Equals(Position) ?? false;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(replacementMap, triggerMap, Position);
-        }
-
-        public static bool operator ==(PyramidPosition a, PyramidPosition b) => a?.Equals(b) ?? false;
-        public static bool operator !=(PyramidPosition a, PyramidPosition b) => !a?.Equals(b) ?? true;
     }
 }

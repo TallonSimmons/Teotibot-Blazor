@@ -4,7 +4,7 @@ using Teotibot.Core.Extensions;
 
 namespace Teotibot.Core.ValueObjects
 {
-    public class TileIdentifier
+    public record TileIdentifier
     {
         public TileIdentifier(string title, Set expansion, TileType tileType)
         {
@@ -18,18 +18,5 @@ namespace Teotibot.Core.ValueObjects
         }
 
         public string Id { get; }
-
-        public override bool Equals(object obj)
-        {
-            return Id.Equals(((TileIdentifier)obj)?.Id, StringComparison.OrdinalIgnoreCase);
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
-        public static bool operator ==(TileIdentifier a, TileIdentifier b) => a?.Equals(b) ?? false;
-        public static bool operator !=(TileIdentifier a, TileIdentifier b) => !a?.Equals(b) ?? true;
     }
 }

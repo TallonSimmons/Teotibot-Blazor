@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Teotibot.Core.ValueObjects
 {
-    public class PositionTrigger
+    public record PositionTrigger
     {
         public PositionTrigger(List<int> triggerNumbers)
         {
@@ -23,20 +23,5 @@ namespace Teotibot.Core.ValueObjects
             TriggerNumbers = triggerNumbers;
         }
         public List<int> TriggerNumbers { get; }
-
-        public override bool Equals(object obj)
-        {
-            return TriggerNumbers
-                .All(x => ((PositionTrigger)obj).TriggerNumbers
-                .Any(y => x == y));
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(TriggerNumbers);
-        }
-
-        public static bool operator ==(PositionTrigger a, PositionTrigger b) => a?.Equals(b) ?? false;
-        public static bool operator !=(PositionTrigger a, PositionTrigger b) => !a?.Equals(b) ?? true;
     }
 }

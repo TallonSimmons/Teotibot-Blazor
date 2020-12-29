@@ -8,7 +8,7 @@ using Teotibot.SharedKernel.Extensions;
 
 namespace Teotibot.Core.ValueObjects
 {
-    public class Pyramid
+    public record Pyramid
     {
         private readonly Dictionary<PyramidPosition, PyramidTile> pyramidPositions = new Dictionary<PyramidPosition, PyramidTile>();
 
@@ -66,20 +66,5 @@ namespace Teotibot.Core.ValueObjects
                 pyramidPositions[replaceFromPosition.Key] = null;
             }
         }
-
-        public override bool Equals(object obj)
-        {
-            var other = ((Pyramid)obj);
-            return other?.HasEmptyPyramidPositions == HasEmptyPyramidPositions 
-                && other.pyramidPositions.ContentEquals(pyramidPositions);
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(pyramidPositions, HasEmptyPyramidPositions);
-        }
-
-        public static bool operator ==(Pyramid a, Pyramid b) => a?.Equals(b) ?? false;
-        public static bool operator !=(Pyramid a, Pyramid b) => !a?.Equals(b) ?? true;
     }
 }

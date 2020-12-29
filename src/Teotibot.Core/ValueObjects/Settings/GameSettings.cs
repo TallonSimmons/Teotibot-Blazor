@@ -2,7 +2,7 @@
 
 namespace Teotibot.Core.ValueObjects.Settings
 {
-    public class GameSettings
+    public record GameSettings
     {
         public GameSettings(LatePreClassicPeriodSettings latePreClassicPeriodSettings, ShadowsOfXitleSettings shadowsOfXitleSettings, PromoSettings promoSettings)
         {
@@ -14,21 +14,5 @@ namespace Teotibot.Core.ValueObjects.Settings
         public LatePreClassicPeriodSettings LatePreClassicPeriodSettings { get; }
         public ShadowsOfXitleSettings ShadowsOfXitleSettings { get; }
         public PromoSettings PromoSettings { get; }
-
-        public override bool Equals(object obj)
-        {
-            return !(obj is null) && obj is GameSettings settings &&
-                    settings.LatePreClassicPeriodSettings.Equals(LatePreClassicPeriodSettings) &&
-                    settings.ShadowsOfXitleSettings.Equals(ShadowsOfXitleSettings) &&
-                    settings.PromoSettings.Equals(PromoSettings);
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(LatePreClassicPeriodSettings, ShadowsOfXitleSettings, PromoSettings);
-        }
-
-        public static bool operator ==(GameSettings a, GameSettings b) => a?.Equals(b) ?? false;
-        public static bool operator !=(GameSettings a, GameSettings b) => !a?.Equals(b) ?? true;
     }
 }

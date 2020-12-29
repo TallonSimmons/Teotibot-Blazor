@@ -6,7 +6,7 @@ using Teotibot.Core.ValueObjects.Validation;
 
 namespace Teotibot.Core.ValueObjects
 {
-    public class Setup
+    public record Setup
     {
         public Setup(GameSettings settings, IReadOnlyCollection<RoyalTile> royalTiles, IReadOnlyCollection<StartingTile> startingTiles, IReadOnlyCollection<PriestTile> priestTiles, IReadOnlyCollection<TechnologyTile> technologyTiles, IReadOnlyCollection<SeasonTile> seasonTiles)
         {
