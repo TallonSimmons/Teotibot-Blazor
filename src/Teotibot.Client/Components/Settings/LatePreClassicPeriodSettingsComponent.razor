@@ -1,0 +1,14 @@
+﻿@inherits StoreComponent<AppStore>
+
+<div class="container-fluid">
+    <h2>Late Pre-Class Period</h2>
+    <div class="form-group">
+        <input type="checkbox" name="seasonTiles" @bind="includeSeasonTiles"/>
+        <label></label>
+    </div>
+</div>
+
+@code {
+    bool includeSeasonTiles = false;
+    bool includePriestTiles = false;
+}

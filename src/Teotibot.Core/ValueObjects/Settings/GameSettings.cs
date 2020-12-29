@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Teotibot.Core.ValueObjects.Settings
+﻿namespace Teotibot.Core.ValueObjects.Settings
 {
     public record GameSettings
     {
@@ -11,8 +9,8 @@ namespace Teotibot.Core.ValueObjects.Settings
             PromoSettings = promoSettings;
         }
 
-        public LatePreClassicPeriodSettings LatePreClassicPeriodSettings { get; }
-        public ShadowsOfXitleSettings ShadowsOfXitleSettings { get; }
-        public PromoSettings PromoSettings { get; }
+        public LatePreClassicPeriodSettings LatePreClassicPeriodSettings { get; init; }
+        public ShadowsOfXitleSettings ShadowsOfXitleSettings { get; init;  }
+        public PromoSettings PromoSettings { get; init;  }
     }
 }
