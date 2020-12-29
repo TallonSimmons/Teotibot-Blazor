@@ -3,7 +3,7 @@ using Teotibot.Core.Enums;
 
 namespace Teotibot.Core.ValueObjects.Settings
 {
-    public class PromoSettings : IStartingTileSettings, IRoyalTileSettings, ITechnologyTileSettings
+    public class PromoSettings : ISettings
     {
         public PromoSettings(bool includeTechnologyTiles, bool includeRoyalTiles, bool includeStartingTiles)
         {

@@ -3,7 +3,7 @@ using Teotibot.Core.Enums;
 
 namespace Teotibot.Core.ValueObjects.Settings
 {
-    public class ShadowsOfXitleSettings : IStartingTileSettings, ITechnologyTileSettings
+    public class ShadowsOfXitleSettings : ISettings
     {
         public ShadowsOfXitleSettings(bool includeTechnologyTiles, bool includeStartingTiles)
         {

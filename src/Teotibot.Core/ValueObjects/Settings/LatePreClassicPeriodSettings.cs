@@ -3,7 +3,7 @@ using Teotibot.Core.Enums;
 
 namespace Teotibot.Core.ValueObjects.Settings
 {
-    public class LatePreClassicPeriodSettings : ISeasonTileSettings, IPriestTileSettings
+    public class LatePreClassicPeriodSettings : ISettings
     {
         public LatePreClassicPeriodSettings(bool includePriestTiles, bool includeSeasonTiles)
         {
