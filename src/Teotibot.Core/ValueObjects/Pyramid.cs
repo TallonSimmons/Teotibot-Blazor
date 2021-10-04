@@ -4,7 +4,6 @@ using System.Linq;
 using Teotibot.Core.Entities.Tiles;
 using Teotibot.Core.Entities.Tiles.PyramidTiles;
 using Teotibot.Core.Extensions;
-using Teotibot.SharedKernel.Extensions;
 
 namespace Teotibot.Core.ValueObjects
 {
@@ -63,7 +62,7 @@ namespace Teotibot.Core.ValueObjects
             {
                 pyramidPositions[positionToReplace.Key] = replaceFromPosition.Value;
 
-                pyramidPositions[replaceFromPosition.Key] = null;
+                pyramidPositions.Remove(replaceFromPosition.Key);
             }
         }
 

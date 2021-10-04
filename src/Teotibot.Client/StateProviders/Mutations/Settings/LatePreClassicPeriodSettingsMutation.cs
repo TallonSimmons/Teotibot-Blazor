@@ -5,7 +5,7 @@ using Teotibot.Core.ValueObjects.Settings;
 
 namespace Teotibot.Client.Store.Mutations.Settings
 {
-    public record LatePreClassicPeriodSettingsMutation : Mutation<AppStore>
+    public record LatePreClassicPeriodSettingsMutation : Mutation<AppState>
     {
         public LatePreClassicPeriodSettingsMutation(LatePreClassicPeriodSettings latePreClassicPeriodSettings)
         {
@@ -15,22 +15,22 @@ namespace Teotibot.Client.Store.Mutations.Settings
         public LatePreClassicPeriodSettings LatePreClassicPeriodSettings { get; }
     }
 
-    public class LatePreClassicPeriodSettingsMutationHandler : IMutationHandler<LatePreClassicPeriodSettingsMutation, AppStore>
+    public class LatePreClassicPeriodSettingsMutationHandler : IMutationHandler<LatePreClassicPeriodSettingsMutation, AppState>
     {
-        public LatePreClassicPeriodSettingsMutationHandler(AppStore store)
+        public LatePreClassicPeriodSettingsMutationHandler(AppState store)
         {
             Store = store;
         }
 
-        public AppStore Store { get; }
+        public AppState Store { get; }
 
-        public Task<AppStore> Handle(LatePreClassicPeriodSettingsMutation request, CancellationToken cancellationToken)
+        public Task<AppState> Handle(LatePreClassicPeriodSettingsMutation request, CancellationToken cancellationToken)
         {
             var oldGame = Store.Game;
             var newSettings = Store.Game.Settings with { LatePreClassicPeriodSettings = request.LatePreClassicPeriodSettings };
             var newGame = new Game(oldGame.Id, newSettings, oldGame.Pyramid, oldGame.SetAsideTile, oldGame.TopDirectionTile, oldGame.BottomDirectionTile, oldGame.ActiveTile);
 
-            return Task.FromResult(new AppStore(newGame));
+            return Task.FromResult(new AppState(newGame));
         }
     }
 }

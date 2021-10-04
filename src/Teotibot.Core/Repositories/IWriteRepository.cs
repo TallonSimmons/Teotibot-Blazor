@@ -6,6 +6,6 @@ namespace Teotibot.Core.Repositories
     public interface IWriteRepository
     {
         public Task<ISavedChangesResult> SaveChangesAsync();
-        public Task<ISavedChangesResult> CreateOrUpdate<T>(T entity);
+        public Task<ISavedChangesResult> CreateOrUpdateAsync<T>(T entity);
     }
 }

@@ -12,7 +12,7 @@ namespace Teotibot.Application.Composition
             var implementedStores = typeof(PyramidTileStore)
                 .Assembly
                 .GetTypes()
-                .Where(x => x.GetInterfaces().Contains(typeof(IReadStore<>)));
+                .Where(x => x.GetInterfaces().Contains(typeof(IReadStore<>)) && !x.IsAbstract);
 
             foreach (var store in implementedStores)
             {

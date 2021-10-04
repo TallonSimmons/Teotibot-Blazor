@@ -26,7 +26,7 @@ namespace Teotibot.Infrastructure.Repositories
             return new SavedChangesResult(result);
         }
 
-        public async Task<ISavedChangesResult> CreateOrUpdate<T>(T entity)
+        public async Task<ISavedChangesResult> CreateOrUpdateAsync<T>(T entity)
         {
             try
             {

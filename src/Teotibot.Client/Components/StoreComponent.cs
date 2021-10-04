@@ -6,7 +6,7 @@ using Teotibot.Client.Store.Mutations;
 
 namespace Teotibot.Client.Components
 {
-    public abstract class StoreComponent<TStore> : ComponentBase where TStore : StoreBase
+    public abstract class StoreComponent<TStore> : ComponentBase where TStore : StateBase
     {
         [Inject]
         IMediator Mediator { get; set; }

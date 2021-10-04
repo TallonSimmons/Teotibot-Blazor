@@ -1,10 +1,11 @@
 ﻿using System;
+using Teotibot.Core.Store;
 
 namespace Teotibot.Client.Store
 {
-    public abstract class StoreBase
+    public abstract class StateBase : IStateProvider
     {
-        public StoreBase()
+        public StateBase()
         {
             OnStoreMutated?.Invoke();
         }
